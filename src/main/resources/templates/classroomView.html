@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Class room at LISANGA</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th> class level </th>
+			<th> class shift </th>
+			<th> class size </th>
+			<th> class students gender </th>
+		</tr>
+		<tr th:each="classroom: ${listOfClass}">
+			<td th:text="${classroom.level}"> </td>
+			<td th:text="${classroom.shift}"></td>
+			<td th:text="${classroom.size}"></td>
+			<td th:text="${classroom.classgender}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
